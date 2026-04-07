@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <!-- Preconnect to image domains for much faster initial load -->
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="menu-container">
+            <button class="three-dots-btn" id="menu-toggle" aria-label="Menu">&#8942;</button>
+            <div class="dropdown-menu" id="dropdown-menu">
+                <button class="dropdown-item" id="menu-favorites">❤️ Favorites</button>
+                <button class="dropdown-item" id="menu-recycle">🗑️ Recycle Bin</button>
+                <hr>
+                <button class="dropdown-item" id="menu-settings">⚙️ Settings</button>
+            </div>
+        </div>
+        <h1>Gallery</h1>
+        <p>Explore our curated collection of stunning high-resolution photography</p>
+    </header>
+
+    <!-- Category Filters -->
+    <div class="filter-container">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="videos">🎥 Videos</button>
+        <button class="filter-btn" data-filter="nature">Nature</button>
+        <button class="filter-btn" data-filter="city">City</button>
+        <button class="filter-btn" data-filter="tech">Technology</button>
+        <button class="filter-btn" data-filter="animals">Animals</button>
+        <button class="filter-btn" data-filter="food">Food</button>
+        <button class="filter-btn" data-filter="documents">📄 Documents</button>
+        <button class="filter-btn" data-filter="recycle" style="margin-left: 20px;">🗑️ Recycle Bin</button>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="gallery" id="gallery">
+        <!-- ================= FOOD ================= -->
+        <div class="gallery-item" data-category="food" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=80" alt="Healthy Bowl">
+            <div class="item-info"><h3>Healthy Bowl</h3><span>Food</span></div>
+        </div>
+        <div class="gallery-item" data-category="food" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?auto=format&fit=crop&w=800&q=80" alt="Burger">
+            <div class="item-info"><h3>Classic Burger</h3><span>Food</span></div>
+        </div>
+        <div class="gallery-item" data-category="food" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1621996311205-d0551c6c06a4?auto=format&fit=crop&w=800&q=80" alt="Pasta">
+            <div class="item-info"><h3>Italian Pasta</h3><span>Food</span></div>
+        </div>
+        <div class="gallery-item" data-category="food" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=800&q=80" alt="Tacos">
+            <div class="item-info"><h3>Street Tacos</h3><span>Food</span></div>
+        </div>
+        <div class="gallery-item" data-category="food" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=80" alt="Dessert">
+            <div class="item-info"><h3>Sweet Dessert</h3><span>Food</span></div>
+        </div>
+
+        <!-- ================= EXTENDED NATURE ================= -->
+        <div class="gallery-item" data-category="nature" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=800&q=80" alt="Swiss Mountains">
+            <div class="item-info"><h3>Swiss Alps</h3><span>Nature</span></div>
+        </div>
+        <div class="gallery-item" data-category="nature" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=800&q=80" alt="Waterfall">
+            <div class="item-info"><h3>Jungle Waterfall</h3><span>Nature</span></div>
+        </div>
+        <div class="gallery-item" data-category="nature" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1423625909895-8144cce3bf0f?auto=format&fit=crop&w=800&q=80" alt="Crystal Lake">
+            <div class="item-info"><h3>Crystal Lake</h3><span>Nature</span></div>
+        </div>
+        <div class="gallery-item" data-category="nature" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1506744626753-df839199ca0f?auto=format&fit=crop&w=800&q=80" alt="Valley">
+            <div class="item-info"><h3>Serene Valley</h3><span>Nature</span></div>
+        </div>
+        <div class="gallery-item" data-category="nature" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80" alt="Forest Path">
+            <div class="item-info"><h3>Forest Path</h3><span>Nature</span></div>
+        </div>
+        <div class="gallery-item" data-category="nature" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1470071131384-001b85755b36?auto=format&fit=crop&w=800&q=80" alt="Leaves">
+            <div class="item-info"><h3>Dew Drops</h3><span>Nature</span></div>
+        </div>
+        <div class="gallery-item" data-category="nature" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80" alt="Canyon">
+            <div class="item-info"><h3>Grand Canyon</h3><span>Nature</span></div>
+        </div>
+
+        <!-- ================= EXTENDED CITY ================= -->
+        <div class="gallery-item" data-category="city" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1493606278519-11ba4931dd2b?auto=format&fit=crop&w=800&q=80" alt="Skyscrapers">
+            <div class="item-info"><h3>Skyscrapers</h3><span>City</span></div>
+        </div>
+        <div class="gallery-item" data-category="city" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1480796927426-f609979314bd?auto=format&fit=crop&w=800&q=80" alt="Tokyo">
+            <div class="item-info"><h3>Tokyo Streets</h3><span>City</span></div>
+        </div>
+        <div class="gallery-item" data-category="city" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1502899576059-cb14e21d607e?auto=format&fit=crop&w=800&q=80" alt="City Night">
+            <div class="item-info"><h3>Night Traffic</h3><span>City</span></div>
+        </div>
+        <div class="gallery-item" data-category="city" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1449034446853-66c86144b0ad?auto=format&fit=crop&w=800&q=80" alt="Golden Gate">
+            <div class="item-info"><h3>Golden Gate</h3><span>City</span></div>
+        </div>
+        <div class="gallery-item" data-category="city" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1518398046578-8cca57782e17?auto=format&fit=crop&w=800&q=80" alt="Subway">
+            <div class="item-info"><h3>Subway Station</h3><span>City</span></div>
+        </div>
+        <div class="gallery-item" data-category="city" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1514924013411-cbf25faa35bb?auto=format&fit=crop&w=800&q=80" alt="European City">
+            <div class="item-info"><h3>Old Town</h3><span>City</span></div>
+        </div>
+        <div class="gallery-item" data-category="city" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1496568816309-51d7c20e3b21?auto=format&fit=crop&w=800&q=80" alt="Rainy Street">
+            <div class="item-info"><h3>Rainy Metro</h3><span>City</span></div>
+        </div>
+
+        <!-- ================= EXTENDED TECHNOLOGY ================= -->
+        <div class="gallery-item" data-category="tech" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1519389953810-19508157efa5?auto=format&fit=crop&w=800&q=80" alt="Laptop desk">
+            <div class="item-info"><h3>Workspace</h3><span>Technology</span></div>
+        </div>
+        <div class="gallery-item" data-category="tech" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=800&q=80" alt="Data Lines">
+            <div class="item-info"><h3>Fiber Optics</h3><span>Technology</span></div>
+        </div>
+        <div class="gallery-item" data-category="tech" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1517077304055-6e89abadf0fa?auto=format&fit=crop&w=800&q=80" alt="VR Headset">
+            <div class="item-info"><h3>Virtual Reality</h3><span>Technology</span></div>
+        </div>
+        <div class="gallery-item" data-category="tech" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=800&q=80" alt="Phone Screen">
+            <div class="item-info"><h3>Mobile Dev</h3><span>Technology</span></div>
+        </div>
+        <div class="gallery-item" data-category="tech" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" alt="Global Network">
+            <div class="item-info"><h3>Global Network</h3><span>Technology</span></div>
+        </div>
+        <div class="gallery-item" data-category="tech" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&fit=crop&w=800&q=80" alt="Programming">
+            <div class="item-info"><h3>Programming</h3><span>Technology</span></div>
+        </div>
+        <div class="gallery-item" data-category="tech" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80" alt="Networking">
+            <div class="item-info"><h3>Network Cable</h3><span>Technology</span></div>
+        </div>
+
+        <!-- ================= EXTENDED ANIMALS ================= -->
+        <div class="gallery-item" data-category="animals" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1583337130417-3236eb9f30e2?auto=format&fit=crop&w=800&q=80" alt="Cat">
+            <div class="item-info"><h3>Curious Cat</h3><span>Animals</span></div>
+        </div>
+        <div class="gallery-item" data-category="animals" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?auto=format&fit=crop&w=800&q=80" alt="Leopard">
+            <div class="item-info"><h3>Snow Leopard</h3><span>Animals</span></div>
+        </div>
+        <div class="gallery-item" data-category="animals" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1504006833114-11885b54f67d?auto=format&fit=crop&w=800&q=80" alt="Elephant">
+            <div class="item-info"><h3>Elephant Herd</h3><span>Animals</span></div>
+        </div>
+        <div class="gallery-item" data-category="animals" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1564349683130-1845fef109b0?auto=format&fit=crop&w=800&q=80" alt="Penguin">
+            <div class="item-info"><h3>Emperor Penguin</h3><span>Animals</span></div>
+        </div>
+        <div class="gallery-item" data-category="animals" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1535591273668-578e31119aa3?auto=format&fit=crop&w=800&q=80" alt="Panda">
+            <div class="item-info"><h3>Giant Panda</h3><span>Animals</span></div>
+        </div>
+        <div class="gallery-item" data-category="animals" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?auto=format&fit=crop&w=800&q=80" alt="Meerkat">
+            <div class="item-info"><h3>Alert Meerkat</h3><span>Animals</span></div>
+        </div>
+        <div class="gallery-item" data-category="animals" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1557008075-7f2c5efa4cfd?auto=format&fit=crop&w=800&q=80" alt="Horse">
+            <div class="item-info"><h3>Wild Horse</h3><span>Animals</span></div>
+        </div>
+
+        <!-- ================= EXTENDED FOOD ================= -->
+        <div class="gallery-item" data-category="food" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1497365611326-88abeb7e9ec9?auto=format&fit=crop&w=800&q=80" alt="Sushi">
+            <div class="item-info"><h3>Sushi Platter</h3><span>Food</span></div>
+        </div>
+        <div class="gallery-item" data-category="food" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80" alt="Ramen">
+            <div class="item-info"><h3>Hot Ramen</h3><span>Food</span></div>
+        </div>
+        <div class="gallery-item" data-category="food" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1482049362635-c5793cdb1216?auto=format&fit=crop&w=800&q=80" alt="Pancakes">
+            <div class="item-info"><h3>Breakfast Pancakes</h3><span>Food</span></div>
+        </div>
+        <div class="gallery-item" data-category="food" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80" alt="Pizza Slice">
+            <div class="item-info"><h3>Pepperoni Pizza</h3><span>Food</span></div>
+        </div>
+        <div class="gallery-item" data-category="food" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Steak">
+            <div class="item-info"><h3>Grilled Steak</h3><span>Food</span></div>
+        </div>
+        <div class="gallery-item" data-category="food" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=800&q=80" alt="Donut">
+            <div class="item-info"><h3>Glazed Donut</h3><span>Food</span></div>
+        </div>
+        <div class="gallery-item" data-category="food" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80" alt="Cocktail">
+            <div class="item-info"><h3>Summer Cocktail</h3><span>Food</span></div>
+        </div>
+
+        <!-- ================= EXTENDED DOCUMENTS ================= -->
+        <div class="gallery-item" data-category="documents" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1450101499162-3d384661d8b6?auto=format&fit=crop&w=800&q=80" alt="Old Books">
+            <div class="item-info"><h3>Old Books</h3><span>Documents</span></div>
+        </div>
+        <div class="gallery-item" data-category="documents" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1503694978374-8a2fa68f5986?auto=format&fit=crop&w=800&q=80" alt="Typewriter">
+            <div class="item-info"><h3>Vintage Typewriter</h3><span>Documents</span></div>
+        </div>
+        <div class="gallery-item" data-category="documents" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1455390506871-a0055b85a198?auto=format&fit=crop&w=800&q=80" alt="Coffee and Notes">
+            <div class="item-info"><h3>Coffee & Notes</h3><span>Documents</span></div>
+        </div>
+        <div class="gallery-item" data-category="documents" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Team Notes">
+            <div class="item-info"><h3>Team Brainstorm</h3><span>Documents</span></div>
+        </div>
+        <div class="gallery-item" data-category="documents" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1542361345-89e58247f2d5?auto=format&fit=crop&w=800&q=80" alt="Library">
+            <div class="item-info"><h3>Library Aisles</h3><span>Documents</span></div>
+        </div>
+        <div class="gallery-item" data-category="documents" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Coding Documentation">
+            <div class="item-info"><h3>Coding Specs</h3><span>Documents</span></div>
+        </div>
+        <div class="gallery-item" data-category="documents" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1588600878108-578307a3cc9d?auto=format&fit=crop&w=800&q=80" alt="Passport">
+            <div class="item-info"><h3>Travel Docs</h3><span>Documents</span></div>
+        </div>
+        <div class="gallery-item" data-category="documents" data-type="image" data-favorite="false" data-recycled="false">
+            <div class="item-actions">
+                <button class="action-btn btn-fav" title="Favorite">🤍</button>
+                <button class="action-btn btn-trash" title="Move to Recycle Bin">🗑️</button>
+                <button class="action-btn btn-restore" title="Restore">♻️</button>
+                <button class="action-btn btn-perm-del" title="Permanently Delete">❌</button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=800&q=80" alt="Blueprint">
+            <div class="item-info"><h3>Architect Blueprint</h3><span>Documents</span></div>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <!-- SVG Filter for Sharpness -->
+        <svg style="width:0;height:0;position:absolute;">
+            <defs>
+                <filter id="sharpen-filter">
+                    <feConvolveMatrix id="sharpen-matrix" order="3 3" preserveAlpha="true" divisor="1" kernelMatrix="0 0 0 0 1 0 0 0 0" />
+                </filter>
+            </defs>
+        </svg>
+
+        <button class="close-btn" id="close-btn">&times;</button>
+        <button class="extract-toggle-btn" id="extract-toggle-btn">📝 Extract Text</button>
+        <button class="edit-toggle-btn" id="edit-toggle-btn">🎨 Edit Image</button>
+        
+        <div class="lightbox-main">
+            <button class="nav-btn prev-btn" id="prev-btn">&#10094;</button>
+            <img src="" alt="Lightbox Image" class="lightbox-img" id="lightbox-img" crossorigin="anonymous">
+            <video src="" class="lightbox-video" id="lightbox-video" controls></video>
+            <div class="lightbox-caption" id="lightbox-caption">Image Caption</div>
+            <button class="nav-btn next-btn" id="next-btn">&#10095;</button>
+        </div>
+
+        <div class="editor-panel" id="editor-panel">
+            <h3>Image Editor</h3>
+            <div class="control-group">
+                <label>Brightness <span id="val-brightness">100%</span></label>
+                <input type="range" id="edit-brightness" min="0" max="200" value="100">
+            </div>
+            <div class="control-group">
+                <label>Contrast <span id="val-contrast">100%</span></label>
+                <input type="range" id="edit-contrast" min="0" max="200" value="100">
+            </div>
+            <div class="control-group">
+                <label>Saturation <span id="val-saturation">100%</span></label>
+                <input type="range" id="edit-saturation" min="0" max="200" value="100">
+            </div>
+            <div class="control-group">
+                <label>Sharpness <span id="val-sharpness">0%</span></label>
+                <input type="range" id="edit-sharpness" min="0" max="100" value="0">
+            </div>
+            <div class="editor-actions">
+                <button class="editor-btn btn-reset" id="btn-reset">Reset</button>
+                <button class="editor-btn btn-save" id="btn-save">Save Image</button>
+            </div>
+        </div>
+
+        <div class="editor-panel ocr-panel" id="ocr-panel">
+            <h3>Text Extractor</h3>
+            <p style="font-size: 0.9rem; color: #aaa; margin-bottom: 20px;">Scan this image to extract typed or handwritten text using AI OCR.</p>
+            <button class="editor-btn btn-save" id="btn-start-ocr" style="margin-bottom: 20px;">Start Extraction</button>
+            
+            <div id="ocr-loading" style="display: none; text-align: center; margin: 20px 0;">
+                <div class="spinner"></div><br>
+                <span style="color:#aaa; font-size:0.9rem; margin-top:10px; display:block;" id="ocr-status">Initializing...</span>
+            </div>
+            
+            <textarea id="ocr-result" readonly style="width: 100%; height: 180px; background: #000000; color: #fff; border: 1px solid #333; border-radius: 5px; padding: 10px; margin-bottom: 15px; resize: none; display: none; font-family: inherit; font-size: 0.9rem; line-height: 1.5;"></textarea>
+            
+            <div class="editor-actions">
+                <button class="editor-btn btn-save" id="btn-copy-text" style="display: none;">Copy to Clipboard</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div class="modal-overlay" id="settings-modal">
+        <div class="settings-content">
+            <button class="close-modal-btn" id="close-settings">&times;</button>
+            <h3>Gallery Settings</h3>
+            <div class="setting-row">
+                <span>Compact Grid</span>
+                <label class="switch">
+                    <input type="checkbox" id="grid-switch">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+    <script src="Script.js"></script>
+</body>
+</html>
